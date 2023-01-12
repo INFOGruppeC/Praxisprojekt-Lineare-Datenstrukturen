@@ -6,9 +6,9 @@ alles, was er/sie wissen muss. Üblicherweise sollte der Kommentar
 zumindest die folgenden Angaben umfassen:
 ------------------------------------------------------------------------
 
-PROJEKTBEZEICHNUNG:
-PROJEKTZWECK:
-VERSION oder DATUM:
-WIE IST DAS PROJEKT ZU STARTEN:
-AUTOR(EN):
-BENUTZERHINWEISE:
+PROJEKTBEZEICHNUNG: Praxissimulation
+PROJEKTZWECK: Abiturvorbereitung für 2023
+VERSION oder DATUM: 12.01.2023 - xx.xx.2023
+WIE IST DAS PROJEKT ZU STARTEN: main ausführen
+AUTOR(EN): Alexander B., Alexander N., Lukas
+BENUTZERHINWEISE: Keine
