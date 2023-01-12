@@ -1,4 +1,5 @@
 import java.util.*;
+
 public class Praxis {
   private int oeffnungszeit;
   private int prognosezahl;
@@ -19,15 +20,15 @@ public class Praxis {
   }
 
   private void zeittakt() {
-      
-      //Hier findet die eigentliche Simulation der Behanlung ab
-      
-      //Patient wird mit zufälligen Zeibedarf erstellt und an die Liste angefügt
-      
-      //Wenn der Arzt gerade frei ist, wird ein neuer Patient behandelt
-      
-      // Patientenzahl und Leerlaufzeit wird jeweils gespeichert
-    
+
+    // Hier findet die eigentliche Simulation der Behanlung ab
+
+    // Patient wird mit zufälligen Zeibedarf erstellt und an die Liste angefügt
+
+    // Wenn der Arzt gerade frei ist, wird ein neuer Patient behandelt
+
+    // Patientenzahl und Leerlaufzeit wird jeweils gespeichert
+
   }
 
   public void simulierePraxis() {
@@ -39,19 +40,18 @@ public class Praxis {
   public String gibAuswertung() {
     int patientenzahlEnde = 0;
     int behandlungszeit = 0;
-    
-    //Hier wird die Liste Durchgangang um die Simulationsdaten aufsummiert
-    
-    //Euer CODE
-    
-    
-    //Ausgabe dann
-    
+
+    // Hier wird die Liste Durchgangang um die Simulationsdaten aufsummiert
+
+    // Euer CODE
+
+    // Ausgabe dann
+
     String ausgabe = "Auswertung der Praxissimulation" + "\n";
     ausgabe = ausgabe + "Sprechstundenzeit in Minuten: " + oeffnungszeit + "\n";
-    ausgabe = ausgabe + "Erwartete Patientenzahl: " + prognosezahl+ "\n";
-    ausgabe = ausgabe + "Tatsaechliche Patientenzahl: " + patientenzahl+ "\n";
-    ausgabe = ausgabe + "Leerlaufzeit beim Arzt (in Minuten): " + leerlaufzeit+ "\n";
+    ausgabe = ausgabe + "Erwartete Patientenzahl: " + prognosezahl + "\n";
+    ausgabe = ausgabe + "Tatsaechliche Patientenzahl: " + patientenzahl + "\n";
+    ausgabe = ausgabe + "Leerlaufzeit beim Arzt (in Minuten): " + leerlaufzeit + "\n";
 
     ausgabe = ausgabe + "\n" + "Situation am Ende der Sprechstundenzeit" + "\n";
     ausgabe = ausgabe + "Patienten im Wartezimmer: " + patientenzahlEnde + "\n";
