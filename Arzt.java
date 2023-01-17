@@ -1,17 +1,22 @@
 public class Arzt {
     int aktuelleBehandelungszeit;
+
     public Arzt() {
-        
-        
+
     }
-    public void neuerPazient(int pBehandlungszeit){
-        aktuelleBehandelungszeit=pBehandlungszeit;
+
+    // fügt neun Patienten mit entsprechender Behandelungszeit zum Artzt hinzu
+    public void neuerPatient(int pBehandlungszeit) {
+        aktuelleBehandelungszeit = pBehandlungszeit;
     }
-    public void behandlePazient(){
-        
+
+    // jeden aufruf (von Zeittakt) wird eine Minute der aktuellen Behanderlungszeit abgezogen
+    public void behandlePatient() {
+        aktuelleBehandelungszeit--;
     }
-    public boolean istFrei(){
-        return aktuelleBehandelungszeit==0;
+    // gibt zurück ober der Arzt gerade besetzt ist
+    public boolean istFrei() {
+        return aktuelleBehandelungszeit == 0;
     }
 
 }

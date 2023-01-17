@@ -14,6 +14,7 @@ public class Praxis {
     prognosezahl = 20;
     zufall = new Random();
     derArzt = new Arzt();
+    // Queue an Patienten, die das Wartezimmer representiert
     patienten = new Queue<Patient>();
     patientenzahl = 0;
     leerlaufzeit = 0;
@@ -21,13 +22,40 @@ public class Praxis {
 
   private void zeittakt() {
 
-    // Hier findet die eigentliche Simulation der Behanlung ab
-    
-    // Patient wird mit zufälligen Zeibedarf erstellt und an die Liste angefügt
+    /*
+     * Hier findet die eigentliche Simulation der Behanlung ab (main loop des
+     * Programmes)
+     * 
+     * Patient wird mit zufälligen Zeibedarf erstellt und an die Liste angefügt
+     * Die If-Abfrage garantiert eine Normalverteilung der Patientenanzahl um den
+     * Erwartungswerte der Patienten (prognosezahl) zu erreichen.
+     */
+    // float r = zufall.nextFloat(1);
+
+    // System.out.println("random: " + r + " und p= " + ((float)prognosezahl /
+    // oeffnungszeit));
+    // System.out.println("oeffnungs" + oeffnungszeit + " prognose" + prognosezahl);
+
+    if (zufall.nextFloat(1) <= ((float) prognosezahl / oeffnungszeit)) {
+      Patient p = new Patient(zufall.nextInt(10) + 5);
+      patienten.enqueue(p);
+      // Patientenzahl wird jeweils gespeichert
+      patientenzahl++;
+    }
 
     // Wenn der Arzt gerade frei ist, wird ein neuer Patient behandelt
+    if (derArzt.istFrei()) {
+      if (patienten.isEmpty()) {
+        // Leerlaufzeit wird jeweils gespeichert
+        leerlaufzeit++;
+      } else {
+        derArzt.neuerPatient(patienten.front().gibZeitbedarf());
+        patienten.dequeue();
+      }
 
-    // Patientenzahl und Leerlaufzeit wird jeweils gespeichert
+    } else {
+      derArzt.behandlePatient();
+    }
 
   }
 
@@ -41,9 +69,12 @@ public class Praxis {
     int patientenzahlEnde = 0;
     int behandlungszeit = 0;
 
-    // Hier wird die Liste Durchgangang um die Simulationsdaten aufsummiert
-
-
+    // Hier wird die Liste (!Queue) Durchgangang um die Simulationsdaten aufsummiert
+    while (!patienten.isEmpty()) {
+      behandlungszeit += patienten.front().gibZeitbedarf();
+      patientenzahlEnde++;
+      patienten.dequeue();
+    }
 
     // Euer CODE
 
