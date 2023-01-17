@@ -22,7 +22,7 @@ public class Praxis {
   private void zeittakt() {
 
     // Hier findet die eigentliche Simulation der Behanlung ab
-
+    
     // Patient wird mit zufälligen Zeibedarf erstellt und an die Liste angefügt
 
     // Wenn der Arzt gerade frei ist, wird ein neuer Patient behandelt
@@ -42,6 +42,8 @@ public class Praxis {
     int behandlungszeit = 0;
 
     // Hier wird die Liste Durchgangang um die Simulationsdaten aufsummiert
+
+
 
     // Euer CODE
 
