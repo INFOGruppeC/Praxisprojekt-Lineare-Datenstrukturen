@@ -1,5 +1,11 @@
 public class Patient {
-    public Patient() {
-        //#lol
+    int zeitbedarf;
+
+    public Patient(int pZeit) {
+        zeitbedarf = pZeit;
+    }
+
+    public int gibZeitbedarf() {
+        return zeitbedarf;
     }
 }
