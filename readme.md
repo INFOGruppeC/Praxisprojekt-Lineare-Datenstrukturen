@@ -10,7 +10,7 @@ Die Simulation soll Zeitfenster simulieren in denen Patienten behandelt werden.
 
 ## Aufgabe bearbeitet von
 
-- [Lukas](https://github.com/fussel132)
+- [Lukas K](https://github.com/fussel132)
 - [Alexander B](https://github.com/alexanderboric)
 - [Alexander N](https://github.com/TheRealFloatDev)
 
